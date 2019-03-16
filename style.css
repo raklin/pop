@@ -1,0 +1,22 @@
+.intro
+{
+  background-image: linear-gradient(to bottom right, #9708CC, #43CBFF);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90% auto;
+  height: 760px;
+  
+}
+
+.logo
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.label
+{
+  text-align: center;
+  font-family: raleway;
+}
