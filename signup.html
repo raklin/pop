@@ -1,0 +1,55 @@
+<head>
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script>
+      function saveRoot() {
+        console.log("Here");
+        localStorage.setItem("root", "root");
+      }
+
+      function savePassword () {
+        var inputPW = document.getElementById('password').value;
+        var inputUN = document.getElementById('username').value;
+        var confirmPW = document.getElementById('confirmpassword').value;
+        if(inputPW == confirmPW){
+          localStorage.setItem(inputUN, inputPW);
+          alert('Welcome to POP');
+          
+        }
+        else
+          alert('Passwords do not match');
+      }
+      
+    </script>
+</head>
+
+<body onload="saveRoot()">
+  <form>
+    <div class="imgcontainer">
+      <img src="logo.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><font face="verdana"><b>Username</b><font></label>
+      <input type="text" id="username" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw"><b>Confirm Password</b></label>
+      <input type="password" id="confirmpassword" placeholder="Confirm Password" name="cpsw" required>
+
+      <a href="index.html"><button type="button" onclick="savePassword()"><font face="verdana" color="white">Sign Up<face></a></button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <a href="index.html"><button type="button" class="cancelbtn">Cancel</button></a>
+
+      <style="background-color:#f1f1f1">
+      <a href="login.html"><button type="button" class="cancelbtn">Log in</button></a>
+    </div>
+  </form>
+</body>

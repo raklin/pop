@@ -1,0 +1,180 @@
+       <!DOCTYPE html>
+<html>
+  <head>
+    <title>Button</title>
+  </head>
+
+<script>
+  function myFunction() 
+  {
+    var task = document.getElementById("disappears")
+    //task.innerText = "hello";
+    // task.style.backgroundImage = "none";
+    // task.style.backgroundColor = "#43464B";
+    // task.classList.toggle("balloon");
+    task.className = "animation";
+    console.log(task);
+    
+    
+    //.innerHTML = "<br />" + "";
+  }
+  </script>
+
+<button class = "one"> Volunteer in class</button>
+<button class = "two"> Volunteer in class</button>
+<button class = "three"> Volunteer in class</button>
+<button class = "four"> Volunteer in class</button>
+
+
+  <body>
+    <!-- <div class="animation"> -->
+      
+    <div>
+      <button class="balloon" id="disappears" onclick="myFunction()">Talk to someone new!</button>
+    </div>
+  
+
+<style>
+.balloon
+{
+  opacity: 1;
+  animation: new-item-animation 1s linear forwards;
+}
+
+.animation
+{
+  width: 150px;
+  height: 150px;
+  background: #43464B;
+  position: relative;
+  -webkit-animation-name: new-item-animation;
+  animation: new-item-animation 8s ;
+  animation-fill-mode: forwards;
+}
+
+@keyframes new-item-animation
+{
+  from
+  {
+    top: 0px;
+  }
+
+  to
+  {
+    top:660px;
+  }
+}
+body{background-color: #43464B;}
+button {
+  //background-color: #4CAF50; /* Green */
+  background-image: linear-gradient(to bottom right, #9708CC, #43CBFF);
+  border: none;
+  color: white;
+  padding: 50px 50px;
+  text-align: center;
+  text-decoration: none;
+  //display: inline-block;
+  font-size: 16px;
+  //border-radius: 200px;
+  border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 25px;
+}
+
+.one
+{
+  background-image: linear-gradient(to bottom right, #9708CC, #43CBFF);
+  border: none;
+  color: white;
+  padding: 50px 50px;
+  text-align: center;
+  text-decoration: none;
+  //display: inline-block;
+  font-size: 16px;
+  //border-radius: 200px;
+  border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 25px;
+    position: relative;
+    left: 60%;
+    right: 20%;
+}
+
+.two
+{
+  background-image: linear-gradient(to bottom right, #9708CC, #43CBFF);
+  border: none;
+  color: white;
+  padding: 50px 50px;
+  text-align: center;
+  text-decoration: none;
+  //display: inline-block;
+  font-size: 16px;
+  //border-radius: 200px;
+  border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 25px;
+    position: relative;
+    left: 60%px;
+    right: 20%px;
+}
+.three
+{
+  background-image: linear-gradient(to bottom right, #9708CC, #43CBFF);
+  border: none;
+  color: white;
+  padding: 50px 50px;
+  text-align: center;
+  text-decoration: none;
+  //display: inline-block;
+  font-size: 16px;
+  //border-radius: 200px;
+  border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 25px;
+    position: relative;
+    left: 60%;
+    right: 30%;
+}
+.four
+{
+  background-image: linear-gradient(to bottom right, #9708CC, #43CBFF);
+  border: none;
+  color: white;
+  padding: 50px 50px;
+  text-align: center;
+  text-decoration: none;
+  //display: inline-block;
+  font-size: 16px;
+  //border-radius: 200px;
+  border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 25px;
+    position: relative;
+    left: 60%;
+    right: 30%px;
+}
+
+</style>
+  </body>
+  </html>

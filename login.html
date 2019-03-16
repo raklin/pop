@@ -1,0 +1,60 @@
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script>
+      function saveRoot() {
+        console.log("Here");
+        localStorage.setItem("root", "root");
+      }
+
+      function loadPassword() {
+        console.log("Here");
+        var inputUN = document.getElementById('username').value;
+        var storedPW = localStorage.getItem(inputUN);
+        if(storedPW) {
+          console.log("found user");
+          var inputPW = document.getElementById('password').value;
+          if (inputPW == storedPW) {
+            // go to profile page
+            console.log("going to profile");
+            alert("Welcome back");
+            localStorage.setItem('user', inputUN);
+          } else {
+            // exit
+            console.log("exiting cya");
+          }
+
+        }
+      }
+    </script>
+</head>
+
+<body onload="saveRoot()">
+  <form>
+    <div class="imgcontainer">
+      <img src="logo.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><font face="verdana"><b>Username</b><font></label>
+      <input type="text" id="username" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+
+      <a href="index.html"><button type="button" onclick="loadPassword()"><font face="verdana">Login<face></button></a>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <a href="index.html"><button type="button" class="cancelbtn">Cancel</button></a>
+
+      <a href="index.html"><button type="button" class="cancelbtn">Forgot Password</button></a>
+      <a href="signup.html"><button type="button" class="cancelbtn">Sign Up</button></a>
+      <!-- <span class="cancelbtn"><a href="index.html">Forgot password?</a></span>
+      <span class="cancelbtn"><a href="signup.html">Sign Up</a></span> -->
+    </div>
+  </form>
+</body>
